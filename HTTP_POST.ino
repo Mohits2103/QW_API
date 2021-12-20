@@ -11,11 +11,11 @@
 #include <Wire.h>
 
 // Replace with your network credentials
-const char* ssid     = "Rajkot";
-const char* password = "sagara@401";
+const char* ssid     = "SSID";
+const char* password = "PASSWORD";
 
 // REPLACE with your Domain name and URL path or IP address with path
-const char* serverName = "https://apim.quickwork.co/ESP/Temp/v1/ESP";
+const char* serverName = "https://apim.quickwork.co/********************";
 
 
 void setup() {
@@ -43,7 +43,7 @@ void loop() {
     http.begin(serverName);
     
    http.addHeader("Content-Type", "application/json");
-  http.addHeader("apiKey", "8XEF0Gq0l5notcCy9KfdQrQbIiD6sgy1");
+  http.addHeader("apiKey", "*********************************");
   int temperature = random(25,39);
   String x = "{\"Temp\":" + String(temperature) + "}";
   Serial.print(x);
